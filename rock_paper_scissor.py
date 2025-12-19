@@ -1,3 +1,4 @@
+
 import wx
 import random
 import pyttsx3
@@ -38,7 +39,7 @@ def on_start(event):
     skipbtn=wx.Button(start_panel,label="Skip",pos=(380,450))
     skipbtn.Bind(wx.EVT_BUTTON,start_game)
     skipbtn.SetBackgroundColour("#bac095")
-    intro1="Challenger, Welcome! 👋\n\nYou have stepped into the Arena of Three Powers — Rock, Paper, and Scissors.\nFor years, this arena has been guarded by the undefeated champion: Phantom Fist 👊🏾, \na super-intelligent bot built from millions of strategy simulations.\n\nPhantom Fist scans your moves, predicts your patterns, and adapts with\n lightning speed. ⚡\n But today… it faces YOU.\n\nWill you outsmart the machine?  \nWill intuition defeat calculation?  \nOnly one way to find out.\n\nChoose your move — Rock 🪨, Paper 📄, or Scissors ✂️ — and let the duel begin!"
+    intro1="Challenger, Welcome! 👋\n\nYou have stepped into the Arena of Three Powers — Rock, Paper, and Scissors.\nFor years, this arena has been guarded by the undefeated champion: Phantom Fist 👊🏾, \na super-intelligent bot built from millions of strategy simulations.\n\nPhantom Fist scans your moves, predicts your patterns, and adapts with\n lightning speed. ⚡\n But today… it faces YOU.\n\nWill you outsmart the machine?  \nWill intuition defeat calculation?  \nOnly one way to find out.\n\nChoose your move — Rock 🪨, Paper 📄, or Scissors ✂️ — and let the duel begin!"
     intro_voice = (
         "Challenger, Welcome! You have stepped into the Arena of Three Powers — Rock, Paper, and Scissors. "
         "For years, this arena has been guarded by the undefeated champion: Phantom Fist, a super-intelligent bot built from millions of strategy simulations. "
@@ -51,7 +52,7 @@ def on_start(event):
     intro.SetForegroundColour("#0a3b0c")
     speak(intro_voice)
     skipbtn.Hide()
-    next_btn=wx.Button(start_panel, label="Next", pos=(328, 440),size=(160,30))
+    next_btn=wx.Button(start_panel, label="Next", pos=(380, 440),size=(76,30))
     next_btn.SetBackgroundColour("#bac095")
     next_btn.Bind(wx.EVT_BUTTON, start_game)
 
