@@ -17,11 +17,9 @@ draw=0
 intro=0
 
 engine = pyttsx3.init()
-voices = engine.getProperty('voices') 
 engine.setProperty('rate', 150)
 
-def speak(text,n):
-    engine.setProperty('rate', 150) 
+def speak(text):
     engine.say(text)
     engine.runAndWait()
 
@@ -51,7 +49,7 @@ def on_start(event):
     )
     intro = wx.StaticText(start_panel, label=intro1, pos=(25,160)) 
     intro.SetForegroundColour("#0a3b0c")
-    speak(intro_voice,0)
+    speak(intro_voice)
     skipbtn.Hide()
     next_btn=wx.Button(start_panel, label="Next", pos=(328, 440),size=(160,30))
     next_btn.SetBackgroundColour("#bac095")
@@ -260,4 +258,5 @@ end_gamebtn = wx.Button(panel1, label="End Game", pos=(80, 520))
 end_gamebtn.SetBackgroundColour("#ffd3ac")
 end_gamebtn.Bind(wx.EVT_BUTTON, end_game)
 frame.Show()
+
 app.MainLoop()
